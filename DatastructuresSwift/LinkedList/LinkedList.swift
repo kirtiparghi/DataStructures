@@ -91,7 +91,24 @@ class LinkedList {
         }
     }
     
-    public func remove(node: Node) -> Int {
+    public func remove(value: Int) -> Int {
+        //find node after which new node will be added
+        var tmpHead = head
+        var node:Node!
+        while(tmpHead?.next != nil) {
+            if (tmpHead?.data == value) {
+                node = tmpHead
+                break
+            }
+            else {
+                tmpHead = tmpHead?.next
+            }
+        }
+        
+        if (tmpHead?.data == tail?.data && tail?.data == value) {
+            node = tmpHead
+        }
+        
         let prev = node.previous
         let next = node.next
         
@@ -132,5 +149,3 @@ extension LinkedList: CustomStringConvertible {
         return text + "]"
     }
 }
-
-

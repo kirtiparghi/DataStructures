@@ -36,7 +36,7 @@ class DataStructureListVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func switchToDesiredScreen(strDataStructure : String) {
-        switch strDataStructure {            
+        switch strDataStructure {
             case "Array" :
                 self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
             case "Stack" :

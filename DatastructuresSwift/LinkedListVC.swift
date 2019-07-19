@@ -39,7 +39,7 @@ class LinkedListVC: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func btnInsertInBetweenTapped(sender: UIButton) {
-        var valueToAdded = Int(self.txtFieldInput.text!)!
+        let valueToAdded = Int(self.txtFieldInput.text!)!
         let alert = UIAlertController(title: "After which number you want to add new number?", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
@@ -58,5 +58,9 @@ class LinkedListVC: UIViewController,UITextFieldDelegate {
     
     @IBAction func btnPrintListTapped(sender: UIButton) {
         self.txtViewOutput.text = linkedList.description
+    }
+    
+    @IBAction func btnRemoveElementTapped(sender: UIButton) {
+        linkedList.remove(value: Int(self.txtFieldInput.text!)!)
     }
 }

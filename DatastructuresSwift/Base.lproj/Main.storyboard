@@ -150,9 +150,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0H-CO-yAW">
+                                <rect key="frame" x="20" y="309" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.40784313729999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="ffL-AR-o1D"/>
+                                    <constraint firstAttribute="height" constant="34" id="grh-8U-6lg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="REMOVE ELEMENT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPrintListTappedWithSender:" destination="pow-hc-0xy" eventType="touchUpInside" id="en1-wO-CpP"/>
+                                    <action selector="btnRemoveElementTappedWithSender:" destination="pow-hc-0xy" eventType="touchUpInside" id="apk-6t-NOr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="J0H-CO-yAW" firstAttribute="top" secondItem="ca0-aa-Lab" secondAttribute="bottom" constant="19" id="0gB-7G-iCp"/>
                             <constraint firstItem="uJK-tV-uEY" firstAttribute="leading" secondItem="6Hs-v0-5C5" secondAttribute="leading" constant="20" id="0kJ-yD-UYf"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="6V4-b2-foI" secondAttribute="trailing" constant="20" id="1cb-lY-bqa"/>
                             <constraint firstItem="53Q-Ho-kg7" firstAttribute="top" secondItem="CN8-YQ-oX5" secondAttribute="bottom" constant="22" id="5Rv-n3-bp5"/>
@@ -170,11 +187,13 @@
                             <constraint firstItem="gab-q7-5H4" firstAttribute="leading" secondItem="53Q-Ho-kg7" secondAttribute="trailing" constant="6" id="QdQ-gH-Z5B"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="ca0-aa-Lab" secondAttribute="trailing" constant="20" id="TLx-b4-kIP"/>
                             <constraint firstItem="6V4-b2-foI" firstAttribute="top" secondItem="uqR-6r-rTC" secondAttribute="bottom" constant="15" id="VLk-Qq-ues"/>
+                            <constraint firstItem="J0H-CO-yAW" firstAttribute="leading" secondItem="6Hs-v0-5C5" secondAttribute="leading" constant="20" id="bi4-js-OrV"/>
                             <constraint firstItem="53Q-Ho-kg7" firstAttribute="leading" secondItem="6Hs-v0-5C5" secondAttribute="leading" constant="20" id="dGK-lg-76L"/>
                             <constraint firstItem="jRN-Ji-DbA" firstAttribute="width" secondItem="53Q-Ho-kg7" secondAttribute="width" id="e0Y-JH-heT"/>
                             <constraint firstItem="jRN-Ji-DbA" firstAttribute="top" secondItem="uJK-tV-uEY" secondAttribute="bottom" constant="70" id="eWd-CY-4me"/>
                             <constraint firstItem="ca0-aa-Lab" firstAttribute="top" secondItem="53Q-Ho-kg7" secondAttribute="bottom" constant="18" id="epO-C0-z0Z"/>
                             <constraint firstItem="gab-q7-5H4" firstAttribute="height" secondItem="53Q-Ho-kg7" secondAttribute="height" id="iGP-aq-srj"/>
+                            <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="J0H-CO-yAW" secondAttribute="trailing" constant="20" id="qY9-sR-URD"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="jRN-Ji-DbA" secondAttribute="trailing" constant="20" id="ttG-eV-Pa4"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="uqR-6r-rTC" secondAttribute="trailing" constant="20" id="uVz-0z-fes"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="uJK-tV-uEY" secondAttribute="trailing" constant="20" id="vHD-jQ-csT"/>
