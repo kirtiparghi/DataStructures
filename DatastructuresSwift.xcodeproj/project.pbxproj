@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		16E114F422E269960037CC78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E114F322E269960037CC78 /* AppDelegate.swift */; };
-		16E114F622E269960037CC78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E114F522E269960037CC78 /* ViewController.swift */; };
+		16E114F622E269960037CC78 /* DataStructureListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E114F522E269960037CC78 /* DataStructureListVC.swift */; };
 		16E114F922E269960037CC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E114F722E269960037CC78 /* Main.storyboard */; };
 		16E114FB22E269980037CC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E114FA22E269980037CC78 /* Assets.xcassets */; };
 		16E114FE22E269980037CC78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E114FC22E269980037CC78 /* LaunchScreen.storyboard */; };
 		16E1150922E269980037CC78 /* DatastructuresSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1150822E269980037CC78 /* DatastructuresSwiftTests.swift */; };
+		16E1151422E270FE0037CC78 /* LinkedListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1151322E270FE0037CC78 /* LinkedListVC.swift */; };
+		16E1151722E27AB70037CC78 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1151622E27AB70037CC78 /* Node.swift */; };
+		16E1151922E27B550037CC78 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1151822E27B550037CC78 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		16E114F022E269960037CC78 /* DatastructuresSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatastructuresSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E114F322E269960037CC78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16E114F522E269960037CC78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16E114F522E269960037CC78 /* DataStructureListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureListVC.swift; sourceTree = "<group>"; };
 		16E114F822E269960037CC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16E114FA22E269980037CC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16E114FD22E269980037CC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		16E1150422E269980037CC78 /* DatastructuresSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatastructuresSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E1150822E269980037CC78 /* DatastructuresSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatastructuresSwiftTests.swift; sourceTree = "<group>"; };
 		16E1150A22E269990037CC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16E1151322E270FE0037CC78 /* LinkedListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListVC.swift; sourceTree = "<group>"; };
+		16E1151622E27AB70037CC78 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		16E1151822E27B550037CC78 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,10 @@
 		16E114F222E269960037CC78 /* DatastructuresSwift */ = {
 			isa = PBXGroup;
 			children = (
+				16E1151522E27AAC0037CC78 /* LinkedList */,
 				16E114F322E269960037CC78 /* AppDelegate.swift */,
-				16E114F522E269960037CC78 /* ViewController.swift */,
+				16E114F522E269960037CC78 /* DataStructureListVC.swift */,
+				16E1151322E270FE0037CC78 /* LinkedListVC.swift */,
 				16E114F722E269960037CC78 /* Main.storyboard */,
 				16E114FA22E269980037CC78 /* Assets.xcassets */,
 				16E114FC22E269980037CC78 /* LaunchScreen.storyboard */,
@@ -94,6 +102,15 @@
 				16E1150A22E269990037CC78 /* Info.plist */,
 			);
 			path = DatastructuresSwiftTests;
+			sourceTree = "<group>";
+		};
+		16E1151522E27AAC0037CC78 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				16E1151622E27AB70037CC78 /* Node.swift */,
+				16E1151822E27B550037CC78 /* LinkedList.swift */,
+			);
+			path = LinkedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E114F622E269960037CC78 /* ViewController.swift in Sources */,
+				16E1151422E270FE0037CC78 /* LinkedListVC.swift in Sources */,
+				16E114F622E269960037CC78 /* DataStructureListVC.swift in Sources */,
+				16E1151922E27B550037CC78 /* LinkedList.swift in Sources */,
 				16E114F422E269960037CC78 /* AppDelegate.swift in Sources */,
+				16E1151722E27AB70037CC78 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirti.DatastructuresSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,7 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirti.DatastructuresSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
