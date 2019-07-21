@@ -40,7 +40,7 @@ class DataStructureListVC: UIViewController, UITableViewDelegate, UITableViewDat
             case "Array" :
                 self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
             case "Stack" :
-                self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
+                self.performSegue(withIdentifier: "SegueStack", sender: nil)
             case "Queue" :
                 self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
             case "LinkedList" :
