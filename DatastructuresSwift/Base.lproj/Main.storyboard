@@ -48,8 +48,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Data Structures" id="dYY-WE-1M3"/>
                     <connections>
-                        <segue destination="pow-hc-0xy" kind="show" identifier="segueLinkedlist" id="Qe4-Mz-8JS"/>
-                        <segue destination="W8h-XP-whQ" kind="show" identifier="SegueStack" id="yie-t1-KGh"/>
+                        <segue destination="pow-hc-0xy" kind="show" identifier="linkedlistSegue" id="Qe4-Mz-8JS"/>
+                        <segue destination="W8h-XP-whQ" kind="show" identifier="stackSegue" id="yie-t1-KGh"/>
+                        <segue destination="ZQv-VD-xfE" kind="show" identifier="queueSegue" id="Pj1-nQ-cs4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -209,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zq-5c-zpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="99.776785714285708"/>
+            <point key="canvasLocation" x="835" y="-880"/>
         </scene>
         <!--Stack-->
         <scene sceneID="ITy-rV-OR2">
@@ -316,7 +317,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfh-Ph-iYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243.4782608695652" y="98.4375"/>
+            <point key="canvasLocation" x="836" y="-236"/>
+        </scene>
+        <!--Queue-->
+        <scene sceneID="9U9-3J-jyA">
+            <objects>
+                <viewController id="ZQv-VD-xfE" customClass="QueueVC" customModule="DatastructuresSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bch-YS-O1F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-5V-rBT">
+                                <rect key="frame" x="20" y="106" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZQv-VD-xfE" id="Ag0-ga-3Ji"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7s-U8-bAl">
+                                <rect key="frame" x="271" y="181" width="119.5" height="32"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.40784313729999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="PEEK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnInsertAtEndTappedWithSender:" destination="pow-hc-0xy" eventType="touchUpInside" id="TpY-R0-YSl"/>
+                                    <action selector="btnPeekTappedWithSender:" destination="ZQv-VD-xfE" eventType="touchUpInside" id="WZH-1P-yw8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-cr-wp7">
+                                <rect key="frame" x="20" y="181" width="119.5" height="32"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.40784313729999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="ENQUEUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEnqueueTappedWithSender:" destination="ZQv-VD-xfE" eventType="touchUpInside" id="SeY-Nd-6Pi"/>
+                                    <action selector="btnInsertBeginningTappedWithSender:" destination="pow-hc-0xy" eventType="touchUpInside" id="bpn-Fl-g8a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ey-jH-fEQ">
+                                <rect key="frame" x="146" y="181" width="119" height="32"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.40784313729999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="DEQUEUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDequeueTappedWithSender:" destination="ZQv-VD-xfE" eventType="touchUpInside" id="zqQ-x3-aXq"/>
+                                    <action selector="btnInsertInBetweenTappedWithSender:" destination="pow-hc-0xy" eventType="touchUpInside" id="mRX-7G-LaO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUEUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ0-hs-QaN">
+                                <rect key="frame" x="20" y="258" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hms-Y9-lyY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZC-gT-GIS">
+                                <rect key="frame" x="20" y="311" width="374" height="178"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="NbO-2y-UKF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vgP-cr-wp7" firstAttribute="leading" secondItem="XKr-B9-yWd" secondAttribute="leading" constant="20" id="0jO-zK-N4V"/>
+                            <constraint firstItem="XKr-B9-yWd" firstAttribute="trailing" secondItem="1ZC-gT-GIS" secondAttribute="trailing" constant="20" id="26X-28-cR4"/>
+                            <constraint firstItem="vgP-cr-wp7" firstAttribute="top" secondItem="DzC-5V-rBT" secondAttribute="bottom" constant="45" id="2EG-06-UCB"/>
+                            <constraint firstItem="d7s-U8-bAl" firstAttribute="top" secondItem="DzC-5V-rBT" secondAttribute="bottom" constant="45" id="4gI-Hh-PnL"/>
+                            <constraint firstItem="1ZC-gT-GIS" firstAttribute="leading" secondItem="XKr-B9-yWd" secondAttribute="leading" constant="20" id="7sd-HA-e78"/>
+                            <constraint firstItem="0Ey-jH-fEQ" firstAttribute="baseline" secondItem="vgP-cr-wp7" secondAttribute="baseline" id="9Oz-hM-hF2"/>
+                            <constraint firstItem="YQ0-hs-QaN" firstAttribute="leading" secondItem="XKr-B9-yWd" secondAttribute="leading" constant="20" id="BJq-g4-55l"/>
+                            <constraint firstItem="XKr-B9-yWd" firstAttribute="trailing" secondItem="d7s-U8-bAl" secondAttribute="trailing" constant="23.5" id="JRr-fL-H4g"/>
+                            <constraint firstItem="0Ey-jH-fEQ" firstAttribute="leading" secondItem="vgP-cr-wp7" secondAttribute="trailing" constant="6.5" id="KeL-JJ-h1J"/>
+                            <constraint firstItem="YQ0-hs-QaN" firstAttribute="top" secondItem="d7s-U8-bAl" secondAttribute="bottom" constant="45" id="Pti-PA-snF"/>
+                            <constraint firstItem="d7s-U8-bAl" firstAttribute="height" secondItem="vgP-cr-wp7" secondAttribute="height" id="Wa0-Hh-yCX"/>
+                            <constraint firstItem="XKr-B9-yWd" firstAttribute="trailing" secondItem="DzC-5V-rBT" secondAttribute="trailing" constant="20" id="XaZ-e1-gQj"/>
+                            <constraint firstItem="d7s-U8-bAl" firstAttribute="leading" secondItem="0Ey-jH-fEQ" secondAttribute="trailing" constant="6" id="a5X-My-zS3"/>
+                            <constraint firstItem="d7s-U8-bAl" firstAttribute="width" secondItem="vgP-cr-wp7" secondAttribute="width" id="dU7-zv-Mwf"/>
+                            <constraint firstItem="1ZC-gT-GIS" firstAttribute="top" secondItem="YQ0-hs-QaN" secondAttribute="bottom" constant="8" id="dUj-gF-GWU"/>
+                            <constraint firstItem="DzC-5V-rBT" firstAttribute="leading" secondItem="XKr-B9-yWd" secondAttribute="leading" constant="20" id="sfC-4S-aZY"/>
+                            <constraint firstItem="DzC-5V-rBT" firstAttribute="top" secondItem="XKr-B9-yWd" secondAttribute="top" constant="18" id="uhb-a4-TO7"/>
+                            <constraint firstItem="0Ey-jH-fEQ" firstAttribute="width" secondItem="vgP-cr-wp7" secondAttribute="width" id="wPv-sh-EvF"/>
+                            <constraint firstItem="0Ey-jH-fEQ" firstAttribute="height" secondItem="vgP-cr-wp7" secondAttribute="height" id="yiJ-FS-IXB"/>
+                            <constraint firstItem="XKr-B9-yWd" firstAttribute="trailing" secondItem="YQ0-hs-QaN" secondAttribute="trailing" constant="20" id="zKP-Yi-g0Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XKr-B9-yWd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Queue" id="bDy-gq-INO"/>
+                    <connections>
+                        <outlet property="txtFieldInput" destination="DzC-5V-rBT" id="jMj-v8-m2y"/>
+                        <outlet property="txtViewOutput" destination="1ZC-gT-GIS" id="cc1-Nk-MGO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5J-Mt-9un" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="436"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5yj-L0-lbb">

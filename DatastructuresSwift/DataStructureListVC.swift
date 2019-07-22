@@ -38,13 +38,13 @@ class DataStructureListVC: UIViewController, UITableViewDelegate, UITableViewDat
     func switchToDesiredScreen(strDataStructure : String) {
         switch strDataStructure {
             case "Array" :
-                self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
+                self.performSegue(withIdentifier: "linkedlistSegue", sender: nil)
             case "Stack" :
-                self.performSegue(withIdentifier: "SegueStack", sender: nil)
+                self.performSegue(withIdentifier: "stackSegue", sender: nil)
             case "Queue" :
-                self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
+                self.performSegue(withIdentifier: "queueSegue", sender: nil)
             case "LinkedList" :
-                self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
+                self.performSegue(withIdentifier: "linkedlistSegue", sender: nil)
             case "Searching Algorithms" :
                 self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
             case "Sorting Algorithms" :
