@@ -50,7 +50,7 @@ class DataStructureListVC: UIViewController, UITableViewDelegate, UITableViewDat
             case "Sorting Algorithms" :
                 self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
             case "Trees" :
-                self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
+                self.performSegue(withIdentifier: "binaryTreeSegue", sender: nil)
             case "Graphs" :
                 self.performSegue(withIdentifier: "segueLinkedlist", sender: nil)
             default:
