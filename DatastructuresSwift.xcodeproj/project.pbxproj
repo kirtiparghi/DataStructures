@@ -15,6 +15,10 @@
 		1672377122E555F50052C565 /* BinaryTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377022E555F50052C565 /* BinaryTreeVC.swift */; };
 		1672377322E62BCA0052C565 /* SortingAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377222E62BCA0052C565 /* SortingAlgorithmsVC.swift */; };
 		1672377622E62FF50052C565 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377522E62FF50052C565 /* BubbleSort.swift */; };
+		1672377822E770BA0052C565 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377722E770BA0052C565 /* InsertionSort.swift */; };
+		1672377A22E775530052C565 /* Utitlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377922E775530052C565 /* Utitlity.swift */; };
+		1672377C22E77E020052C565 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377B22E77E020052C565 /* SelectionSort.swift */; };
+		1672377E22E789B00052C565 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672377D22E789B00052C565 /* MergeSort.swift */; };
 		16E114F422E269960037CC78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E114F322E269960037CC78 /* AppDelegate.swift */; };
 		16E114F622E269960037CC78 /* DataStructureListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E114F522E269960037CC78 /* DataStructureListVC.swift */; };
 		16E114F922E269960037CC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E114F722E269960037CC78 /* Main.storyboard */; };
@@ -45,6 +49,10 @@
 		1672377022E555F50052C565 /* BinaryTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeVC.swift; sourceTree = "<group>"; };
 		1672377222E62BCA0052C565 /* SortingAlgorithmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingAlgorithmsVC.swift; sourceTree = "<group>"; };
 		1672377522E62FF50052C565 /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
+		1672377722E770BA0052C565 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
+		1672377922E775530052C565 /* Utitlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utitlity.swift; sourceTree = "<group>"; };
+		1672377B22E77E020052C565 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
+		1672377D22E789B00052C565 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		16E114F022E269960037CC78 /* DatastructuresSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatastructuresSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E114F322E269960037CC78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E114F522E269960037CC78 /* DataStructureListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureListVC.swift; sourceTree = "<group>"; };
@@ -106,6 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				1672377522E62FF50052C565 /* BubbleSort.swift */,
+				1672377722E770BA0052C565 /* InsertionSort.swift */,
+				1672377B22E77E020052C565 /* SelectionSort.swift */,
+				1672377D22E789B00052C565 /* MergeSort.swift */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -147,6 +158,7 @@
 				16E114FA22E269980037CC78 /* Assets.xcassets */,
 				16E114FC22E269980037CC78 /* LaunchScreen.storyboard */,
 				16E114FF22E269980037CC78 /* Info.plist */,
+				1672377922E775530052C565 /* Utitlity.swift */,
 			);
 			path = DatastructuresSwift;
 			sourceTree = "<group>";
@@ -273,6 +285,9 @@
 				16E1151422E270FE0037CC78 /* LinkedListVC.swift in Sources */,
 				16E114F622E269960037CC78 /* DataStructureListVC.swift in Sources */,
 				1672376F22E555650052C565 /* BinaryTree.swift in Sources */,
+				1672377E22E789B00052C565 /* MergeSort.swift in Sources */,
+				1672377822E770BA0052C565 /* InsertionSort.swift in Sources */,
+				1672377A22E775530052C565 /* Utitlity.swift in Sources */,
 				16E1151922E27B550037CC78 /* LinkedList.swift in Sources */,
 				1672377622E62FF50052C565 /* BubbleSort.swift in Sources */,
 				1672376A22E536EC0052C565 /* Queue.swift in Sources */,
@@ -280,6 +295,7 @@
 				1672376522E413970052C565 /* Stack.swift in Sources */,
 				1672377122E555F50052C565 /* BinaryTreeVC.swift in Sources */,
 				16E1151722E27AB70037CC78 /* Node.swift in Sources */,
+				1672377C22E77E020052C565 /* SelectionSort.swift in Sources */,
 				1672377322E62BCA0052C565 /* SortingAlgorithmsVC.swift in Sources */,
 				1672376C22E537E10052C565 /* QueueVC.swift in Sources */,
 				1672376722E4DDEE0052C565 /* StackVC.swift in Sources */,

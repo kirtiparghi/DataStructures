@@ -61,6 +61,6 @@ class LinkedListVC: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func btnRemoveElementTapped(sender: UIButton) {
-        linkedList.remove(value: Int(self.txtFieldInput.text!)!)
+        _ = linkedList.remove(value: Int(self.txtFieldInput.text!)!)
     }
 }

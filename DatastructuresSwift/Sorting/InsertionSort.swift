@@ -1,31 +1,31 @@
 //
-//  BubbleSort.swift
+//  InsertionSort.swift
 //  DatastructuresSwift
 //
-//  Created by Kirti Parghi on 7/22/19.
+//  Created by Kirti Parghi on 7/23/19.
 //  Copyright © 2019 Kirti Parghi. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class BubbleSort
-{
+class InsertionSort {
+    
     var array: Array<Int>!
     
     init(array:Array<Int>) {
         self.array = array
     }
     
-    public func bubbleSort(txtviewOutput:UITextView) {
+    public func insertionSort(txtviewOutput:UITextView) {
         var iteration = String()
-        iteration += "BUBBLE SORT\n"
-        for i in 0..<self.array.count {
-            for j in 0..<self.array.count-i-1 {
-                if self.array[j] > self.array[j+1] {
-                    let tmp = self.array[j]
-                    self.array[j] = self.array[j+1]
-                    self.array[j+1] = tmp
+        iteration += "INSERTION SORT\n"
+        for i in 0..<array.count {
+            for j in 0..<i {
+                if array[i] < array[j] {
+                    let tmp = array[j]
+                    array[j] = array[i]
+                    array[i] = tmp
                 }
             }
             iteration += self.description + "\n"
@@ -34,7 +34,7 @@ class BubbleSort
     }
 }
 
-extension BubbleSort : CustomStringConvertible {
+extension InsertionSort : CustomStringConvertible {
     // 2
     public var description: String {
         // 3
@@ -50,3 +50,4 @@ extension BubbleSort : CustomStringConvertible {
         return text + "]"
     }
 }
+

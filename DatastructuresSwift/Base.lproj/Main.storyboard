@@ -94,8 +94,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="cQT-zy-sSv"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgS-ku-Srk">
@@ -123,17 +122,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufn-AU-2WP">
-                                        <rect key="frame" x="0.0" y="63" width="77" height="30"/>
+                                        <rect key="frame" x="0.0" y="63" width="97" height="30"/>
                                         <state key="normal" title="Heap Sort"/>
                                         <connections>
                                             <action selector="btnHeapSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="6qu-j8-6vp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-vd-uz9">
-                                        <rect key="frame" x="293" y="63" width="77" height="30"/>
+                                        <rect key="frame" x="273" y="63" width="97" height="30"/>
+                                        <state key="normal" title="Selection Sort"/>
+                                        <connections>
+                                            <action selector="btnSelectionSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="GWH-om-BUN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiG-aR-KD0">
-                                        <rect key="frame" x="148.5" y="63" width="77" height="30"/>
+                                        <rect key="frame" x="138.5" y="63" width="97" height="30"/>
                                         <state key="normal" title="Merge Sort"/>
                                         <connections>
                                             <action selector="btnMergeSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="2k9-cA-UdS"/>
@@ -142,17 +145,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="c7x-kF-wLW" firstAttribute="leading" secondItem="Jbk-Tb-ibO" secondAttribute="trailing" constant="42" id="1eF-Ry-lAg"/>
                                     <constraint firstItem="PRg-vd-uz9" firstAttribute="width" secondItem="Ufn-AU-2WP" secondAttribute="width" id="4DP-34-GFV"/>
+                                    <constraint firstItem="Jbk-Tb-ibO" firstAttribute="leading" secondItem="lHk-zO-SrR" secondAttribute="trailing" constant="46" id="6i0-QO-rUG"/>
                                     <constraint firstItem="c7x-kF-wLW" firstAttribute="top" secondItem="EgS-ku-Srk" secondAttribute="top" constant="8" id="7Zg-Py-GOu"/>
                                     <constraint firstItem="HiG-aR-KD0" firstAttribute="height" secondItem="Ufn-AU-2WP" secondAttribute="height" id="86C-et-Vfm"/>
                                     <constraint firstItem="Ufn-AU-2WP" firstAttribute="leading" secondItem="EgS-ku-Srk" secondAttribute="leading" id="KSq-jm-L30"/>
                                     <constraint firstItem="Jbk-Tb-ibO" firstAttribute="top" secondItem="EgS-ku-Srk" secondAttribute="top" constant="8" id="Kus-WF-xX1"/>
                                     <constraint firstItem="lHk-zO-SrR" firstAttribute="top" secondItem="EgS-ku-Srk" secondAttribute="top" constant="8" id="Noe-4V-P73"/>
                                     <constraint firstItem="c7x-kF-wLW" firstAttribute="height" secondItem="lHk-zO-SrR" secondAttribute="height" id="OIu-9O-cW5"/>
-                                    <constraint firstItem="HiG-aR-KD0" firstAttribute="centerX" secondItem="EgS-ku-Srk" secondAttribute="centerX" id="W28-E5-Iay"/>
+                                    <constraint firstItem="PRg-vd-uz9" firstAttribute="leading" secondItem="HiG-aR-KD0" secondAttribute="trailing" constant="37.5" id="QGG-dR-qIv"/>
                                     <constraint firstItem="HiG-aR-KD0" firstAttribute="top" secondItem="Jbk-Tb-ibO" secondAttribute="bottom" constant="25" id="Wdt-29-VVG"/>
                                     <constraint firstItem="PRg-vd-uz9" firstAttribute="height" secondItem="Ufn-AU-2WP" secondAttribute="height" id="d7W-Pk-ELh"/>
                                     <constraint firstAttribute="trailing" secondItem="PRg-vd-uz9" secondAttribute="trailing" constant="4" id="f8r-ji-FQw"/>
+                                    <constraint firstItem="HiG-aR-KD0" firstAttribute="leading" secondItem="Ufn-AU-2WP" secondAttribute="trailing" constant="41.5" id="gg1-IP-xM1"/>
                                     <constraint firstAttribute="trailing" secondItem="c7x-kF-wLW" secondAttribute="trailing" constant="4" id="l2O-PC-tGM"/>
                                     <constraint firstAttribute="height" constant="183" id="mtG-H6-aa9"/>
                                     <constraint firstItem="Jbk-Tb-ibO" firstAttribute="height" secondItem="lHk-zO-SrR" secondAttribute="height" id="mxa-IQ-3xZ"/>
@@ -162,7 +168,6 @@
                                     <constraint firstItem="PRg-vd-uz9" firstAttribute="top" secondItem="c7x-kF-wLW" secondAttribute="bottom" constant="25" id="t9L-hi-jov"/>
                                     <constraint firstItem="HiG-aR-KD0" firstAttribute="width" secondItem="Ufn-AU-2WP" secondAttribute="width" id="uMg-p6-aBS"/>
                                     <constraint firstItem="c7x-kF-wLW" firstAttribute="width" secondItem="lHk-zO-SrR" secondAttribute="width" id="uNR-d8-a1b"/>
-                                    <constraint firstItem="Jbk-Tb-ibO" firstAttribute="centerX" secondItem="EgS-ku-Srk" secondAttribute="centerX" id="zNr-e8-dY0"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iterations of Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h43-yb-Fda">
@@ -241,9 +246,8 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSERT AT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN8-YQ-oX5">
-                                <rect key="frame" x="20" y="163" width="122" height="21"/>
+                                <rect key="frame" x="20" y="163" width="92" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="noT-50-43V"/>
                                     <constraint firstAttribute="height" constant="21" id="wCj-As-v8L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -357,6 +361,7 @@
                             <constraint firstItem="jRN-Ji-DbA" firstAttribute="width" secondItem="53Q-Ho-kg7" secondAttribute="width" id="e0Y-JH-heT"/>
                             <constraint firstItem="jRN-Ji-DbA" firstAttribute="top" secondItem="uJK-tV-uEY" secondAttribute="bottom" constant="70" id="eWd-CY-4me"/>
                             <constraint firstItem="ca0-aa-Lab" firstAttribute="top" secondItem="53Q-Ho-kg7" secondAttribute="bottom" constant="18" id="epO-C0-z0Z"/>
+                            <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="CN8-YQ-oX5" secondAttribute="trailing" constant="302" id="fD1-hR-BZU"/>
                             <constraint firstItem="gab-q7-5H4" firstAttribute="height" secondItem="53Q-Ho-kg7" secondAttribute="height" id="iGP-aq-srj"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="J0H-CO-yAW" secondAttribute="trailing" constant="20" id="qY9-sR-URD"/>
                             <constraint firstItem="6Hs-v0-5C5" firstAttribute="trailing" secondItem="jRN-Ji-DbA" secondAttribute="trailing" constant="20" id="ttG-eV-Pa4"/>
