@@ -52,11 +52,158 @@
                         <segue destination="W8h-XP-whQ" kind="show" identifier="stackSegue" id="yie-t1-KGh"/>
                         <segue destination="ZQv-VD-xfE" kind="show" identifier="queueSegue" id="Pj1-nQ-cs4"/>
                         <segue destination="a3Y-1P-rYb" kind="show" identifier="binaryTreeSegue" id="5X2-h6-tqs"/>
+                        <segue destination="0yp-wa-X1g" kind="show" identifier="sortingSegue" id="y9F-Ny-pS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-52.173913043478265" y="99.776785714285708"/>
+        </scene>
+        <!--Sorting Algorithms-->
+        <scene sceneID="k5A-iD-YTe">
+            <objects>
+                <viewController id="0yp-wa-X1g" customClass="SortingAlgorithmsVC" customModule="DatastructuresSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lfy-Xo-Qi7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter comma seperated numbers below:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyr-wk-wIB">
+                                <rect key="frame" x="20" y="88" width="374" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="2Uc-lP-H9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter numbers here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPI-nC-mbm">
+                                <rect key="frame" x="20" y="153" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fHZ-58-Urj"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0yp-wa-X1g" id="U1L-zv-dGV"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-bi-CNT">
+                                <rect key="frame" x="20" y="562" width="374" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="cQT-zy-sSv"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgS-ku-Srk">
+                                <rect key="frame" x="20" y="191" width="374" height="183"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHk-zO-SrR">
+                                        <rect key="frame" x="0.0" y="8" width="94" height="30"/>
+                                        <state key="normal" title="Bubble Sort"/>
+                                        <connections>
+                                            <action selector="btnBubbleSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="Oj0-ZJ-Cxt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-kF-wLW">
+                                        <rect key="frame" x="276" y="8" width="94" height="30"/>
+                                        <state key="normal" title="Quick Sort"/>
+                                        <connections>
+                                            <action selector="btnQuickSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="vxO-ab-IHz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbk-Tb-ibO">
+                                        <rect key="frame" x="140" y="8" width="94" height="30"/>
+                                        <state key="normal" title="Insertion Sort"/>
+                                        <connections>
+                                            <action selector="btnInsertionSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="Dss-Yb-ruZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufn-AU-2WP">
+                                        <rect key="frame" x="0.0" y="63" width="77" height="30"/>
+                                        <state key="normal" title="Heap Sort"/>
+                                        <connections>
+                                            <action selector="btnHeapSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="6qu-j8-6vp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-vd-uz9">
+                                        <rect key="frame" x="293" y="63" width="77" height="30"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiG-aR-KD0">
+                                        <rect key="frame" x="148.5" y="63" width="77" height="30"/>
+                                        <state key="normal" title="Merge Sort"/>
+                                        <connections>
+                                            <action selector="btnMergeSortTappedWithSender:" destination="0yp-wa-X1g" eventType="touchUpInside" id="2k9-cA-UdS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PRg-vd-uz9" firstAttribute="width" secondItem="Ufn-AU-2WP" secondAttribute="width" id="4DP-34-GFV"/>
+                                    <constraint firstItem="c7x-kF-wLW" firstAttribute="top" secondItem="EgS-ku-Srk" secondAttribute="top" constant="8" id="7Zg-Py-GOu"/>
+                                    <constraint firstItem="HiG-aR-KD0" firstAttribute="height" secondItem="Ufn-AU-2WP" secondAttribute="height" id="86C-et-Vfm"/>
+                                    <constraint firstItem="Ufn-AU-2WP" firstAttribute="leading" secondItem="EgS-ku-Srk" secondAttribute="leading" id="KSq-jm-L30"/>
+                                    <constraint firstItem="Jbk-Tb-ibO" firstAttribute="top" secondItem="EgS-ku-Srk" secondAttribute="top" constant="8" id="Kus-WF-xX1"/>
+                                    <constraint firstItem="lHk-zO-SrR" firstAttribute="top" secondItem="EgS-ku-Srk" secondAttribute="top" constant="8" id="Noe-4V-P73"/>
+                                    <constraint firstItem="c7x-kF-wLW" firstAttribute="height" secondItem="lHk-zO-SrR" secondAttribute="height" id="OIu-9O-cW5"/>
+                                    <constraint firstItem="HiG-aR-KD0" firstAttribute="centerX" secondItem="EgS-ku-Srk" secondAttribute="centerX" id="W28-E5-Iay"/>
+                                    <constraint firstItem="HiG-aR-KD0" firstAttribute="top" secondItem="Jbk-Tb-ibO" secondAttribute="bottom" constant="25" id="Wdt-29-VVG"/>
+                                    <constraint firstItem="PRg-vd-uz9" firstAttribute="height" secondItem="Ufn-AU-2WP" secondAttribute="height" id="d7W-Pk-ELh"/>
+                                    <constraint firstAttribute="trailing" secondItem="PRg-vd-uz9" secondAttribute="trailing" constant="4" id="f8r-ji-FQw"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7x-kF-wLW" secondAttribute="trailing" constant="4" id="l2O-PC-tGM"/>
+                                    <constraint firstAttribute="height" constant="183" id="mtG-H6-aa9"/>
+                                    <constraint firstItem="Jbk-Tb-ibO" firstAttribute="height" secondItem="lHk-zO-SrR" secondAttribute="height" id="mxa-IQ-3xZ"/>
+                                    <constraint firstItem="Ufn-AU-2WP" firstAttribute="top" secondItem="lHk-zO-SrR" secondAttribute="bottom" constant="25" id="oEl-wm-Bst"/>
+                                    <constraint firstItem="Jbk-Tb-ibO" firstAttribute="width" secondItem="lHk-zO-SrR" secondAttribute="width" id="oNs-yW-3AW"/>
+                                    <constraint firstItem="lHk-zO-SrR" firstAttribute="leading" secondItem="EgS-ku-Srk" secondAttribute="leading" id="pSs-ru-9Xb"/>
+                                    <constraint firstItem="PRg-vd-uz9" firstAttribute="top" secondItem="c7x-kF-wLW" secondAttribute="bottom" constant="25" id="t9L-hi-jov"/>
+                                    <constraint firstItem="HiG-aR-KD0" firstAttribute="width" secondItem="Ufn-AU-2WP" secondAttribute="width" id="uMg-p6-aBS"/>
+                                    <constraint firstItem="c7x-kF-wLW" firstAttribute="width" secondItem="lHk-zO-SrR" secondAttribute="width" id="uNR-d8-a1b"/>
+                                    <constraint firstItem="Jbk-Tb-ibO" firstAttribute="centerX" secondItem="EgS-ku-Srk" secondAttribute="centerX" id="zNr-e8-dY0"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iterations of Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h43-yb-Fda">
+                                <rect key="frame" x="20" y="524" width="374" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Xfa-8j-vaA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="89t-J9-fVz" firstAttribute="trailing" secondItem="HPI-nC-mbm" secondAttribute="trailing" constant="20" id="4Ft-8a-4Mi"/>
+                            <constraint firstItem="Zyr-wk-wIB" firstAttribute="top" secondItem="89t-J9-fVz" secondAttribute="top" id="75L-e7-X1y"/>
+                            <constraint firstItem="EgS-ku-Srk" firstAttribute="leading" secondItem="89t-J9-fVz" secondAttribute="leading" constant="20" id="DNa-Rr-wPM"/>
+                            <constraint firstItem="QAM-bi-CNT" firstAttribute="top" secondItem="h43-yb-Fda" secondAttribute="bottom" id="FFR-QT-gYL"/>
+                            <constraint firstItem="89t-J9-fVz" firstAttribute="trailing" secondItem="QAM-bi-CNT" secondAttribute="trailing" constant="20" id="FRB-FG-bOS"/>
+                            <constraint firstItem="QAM-bi-CNT" firstAttribute="bottom" secondItem="89t-J9-fVz" secondAttribute="bottom" id="IvM-7d-3VY"/>
+                            <constraint firstItem="Zyr-wk-wIB" firstAttribute="leading" secondItem="89t-J9-fVz" secondAttribute="leading" constant="20" id="JuZ-Iu-TWz"/>
+                            <constraint firstItem="QAM-bi-CNT" firstAttribute="leading" secondItem="89t-J9-fVz" secondAttribute="leading" constant="20" id="OFp-5z-dyq"/>
+                            <constraint firstItem="89t-J9-fVz" firstAttribute="trailing" secondItem="EgS-ku-Srk" secondAttribute="trailing" constant="20" id="YIM-rE-O4c"/>
+                            <constraint firstItem="89t-J9-fVz" firstAttribute="trailing" secondItem="Zyr-wk-wIB" secondAttribute="trailing" constant="20" id="ZyR-ig-yPj"/>
+                            <constraint firstItem="h43-yb-Fda" firstAttribute="leading" secondItem="89t-J9-fVz" secondAttribute="leading" constant="20" id="acF-ex-fXt"/>
+                            <constraint firstItem="89t-J9-fVz" firstAttribute="trailing" secondItem="h43-yb-Fda" secondAttribute="trailing" constant="20" id="b94-aw-geL"/>
+                            <constraint firstItem="HPI-nC-mbm" firstAttribute="top" secondItem="Zyr-wk-wIB" secondAttribute="bottom" id="ba3-eU-Ebf"/>
+                            <constraint firstItem="EgS-ku-Srk" firstAttribute="top" secondItem="HPI-nC-mbm" secondAttribute="bottom" constant="8" id="mVZ-BP-bdZ"/>
+                            <constraint firstItem="HPI-nC-mbm" firstAttribute="leading" secondItem="89t-J9-fVz" secondAttribute="leading" constant="20" id="xuT-Lu-1N3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="89t-J9-fVz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sorting Algorithms" id="O5B-Rh-jFN"/>
+                    <connections>
+                        <outlet property="txtFieldInput" destination="HPI-nC-mbm" id="Gwa-mY-2di"/>
+                        <outlet property="txtViewOutput" destination="QAM-bi-CNT" id="qlF-rd-Dzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBA-QB-EMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="99.776785714285708"/>
         </scene>
         <!--Binary TreeVC-->
         <scene sceneID="kl3-rV-xNL">
@@ -71,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkX-PZ-dRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="762"/>
+            <point key="canvasLocation" x="1525" y="-715"/>
         </scene>
         <!--Linked List-->
         <scene sceneID="zsv-Ya-FJs">
@@ -226,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zq-5c-zpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="-880"/>
+            <point key="canvasLocation" x="835" y="-1385"/>
         </scene>
         <!--Stack-->
         <scene sceneID="ITy-rV-OR2">
@@ -333,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfh-Ph-iYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-236"/>
+            <point key="canvasLocation" x="1526" y="-1385"/>
         </scene>
         <!--Queue-->
         <scene sceneID="9U9-3J-jyA">
@@ -440,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5J-Mt-9un" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="436"/>
+            <point key="canvasLocation" x="835" y="-714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5yj-L0-lbb">

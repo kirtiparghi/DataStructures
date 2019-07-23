@@ -41,7 +41,7 @@ class BinaryTreeVC: UIViewController {
         tree.insert(newValue: 3)
         
         tree.traverseInOrder { print($0) }
-        tree = tree.search(searchValue: 5)
+        tree = tree.search(searchValue: 5)!
         
     }
     
