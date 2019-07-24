@@ -67,7 +67,10 @@ class SortingAlgorithmsVC: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func btnQuickSortTapped(sender : UIButton) {
-        
+        if (generateArray()) {
+            let sort = QuickSort(array: array)
+            sort.quicksort(left: 0, right: array.count-1, txtViewOutput: txtViewOutput)
+        }
     }
     
     @IBAction func btnMergeSortTapped(sender : UIButton) {
